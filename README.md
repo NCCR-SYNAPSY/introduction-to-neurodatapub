@@ -1,7 +1,7 @@
 
 Presentation about "Adopting Datalad for Sharing Neuroimaging Data: Introduction to NeuroDataPub".
 
-Interactive slides can be viewed at https://NCCR-SYNAPSY.github.io/introduction-to-neurodatapub/.
+Interactive slides can be viewed at https://nccr-synapsy.github.io/introduction-to-neurodatapub/.
 
 Generated PDF can be downloaded at https://github.com/NCCR-SYNAPSY/introduction-to-neurodatapub/raw/main/introduction-to-neurodatapub.pdf.
 
