@@ -21,7 +21,7 @@
 		}
 		</style>
 
-		<title>Presentation Title</title>
+		<title>Adopting Datalad for Sharing Neuroimaging Data</title>
 
 		<meta name="description" content="TO BE COMPLETED">
 		<meta name="author" content="Sebastien Tourbier">
@@ -50,15 +50,15 @@
 				<section>
 					<br>
 					<br>
-					<h2>Presentation Title</h2>
+					<h2>Adopting Datalad for Sharing Neuroimaging Data</h2>
 					<p>
-						<small>RevealJS Template</small>
+						<small>Introduction to NeuroDataPub</small>
 					</p>
 					<p>
 						<small>by <a href="https://wp.unil.ch/connectomics/sebastien-tourbier/">Sebastien Tourbier</a></small>
 					</p>
 					<p>
-						<small>DD MM 2021</small>
+						<small>31 08 2021</small>
 					</p>
 					<p>
 						<img data-src="images/synapsy_logo.png" alt="NCCR-Synapsy logo" style="height: 100px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
@@ -67,50 +67,190 @@
 				</section>
 
 				<section>
-					<h2>TRANSITION SLIDE</h2>
-				</section>
+					<section>
+						<h2>What is NeuroDataPub?</h2>
+					</section>
 
-				<section>
-					<h3>Slide with list and small font size</h3>
-					<p>
-							<ul>		
-								<li> item 1
-								</li><br>
-								
-								<li> item 2<br><br>
-									<ul>
-										<small>
-											<li>item <a style="color:dodgerblue">2.1</a></li><br>
-											<li>item <a style="color:chocolate">2.2</a></li>
-										</small>
-									</ul>
-								</li>
-								
-							</ul>
-						
-					</p>
+					<section>
+						<h3>NeuroDataPub: NCCR-SYNAPSY neuroimaging data publishing tool</h3>
+						<small>
+							<p>
+								<ul>
+									<li>Tool written in Python and built on top of Datalad and git-annex to manage and share, privately or publicly, a dataset repository on GitHub with files annexed on a SSH data server.</li>
+								</ul>
+								<center>
+									<img data-src="https://neurodatapub.readthedocs.io/en/latest/_images/neurodatapub_illustration.png" alt="NeuroDataPub Illustration" style="height: 400px; margin: 0.5rem 0.5rem 0.5rem a0.5rem; background: transparent;" class="demo-logo">
+								</center>
 
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>The aims of NeuroDataPub</h3>
+						<small>
+							<p>
+								<ul>
+									<li><a style="color:dodgerblue">Support neuroimaging dataset catalogue creation</a> and <a style="color:dodgerblue">lower the barriers to adopt Datalad</a> in order to <a style="color:chocolate">fully implement Synapsy Neuroimaging Data Management Plan</a>.</li>
+								</ul>
+								<center>
+									<img data-src="images/neurodatapub_dmp_aims.png" alt="NeuroDataPub Aims" style="height: 430px; margin: 0.5rem 0.5rem 0.5rem a0.5rem; background: transparent;" class="demo-logo">
+								</center>
+
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>Easy to install</h3>
+						<small>
+							<p>
+								<ul>
+									<li>Provide a Conda environment with all dependencies installed (such as Datalad and extensions, git-annex) that can be easily created as follows:
+										<pre><code data-trim class="language-shell">
+$ conda env create -f "https://github.com/NCCR-SYNAPSY/neurodatapub/raw/main/conda/environment.yml"
+										</code></pre>
+									</li>
+									<li>Neurodatapub is available on the Python Package Index (PyPI) and can be easily installed.
+									</li>
+									<center>
+										<img data-src="images/neurodatapub_pypi.png" alt="NeuroDataPub PyPI page" style="height: 200px; margin: 0.5rem 0.5rem 0.5rem 0.5rem; background: transparent;" class="demo-logo">
+									</center>
+								</ul>
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>Easy to use</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>Come with a graphical user interface, aka the NeuroDataPub Assistant
+										<pre><code data-trim class="language-shell">
+$ conda activate neurodatapub-env
+(neurodatapub-env)$ neurodatapub --gui 
+										</code></pre>
+										<center>
+											<img data-src="images/neurodatapub_siblings_tab_window.png" alt="NeuroDataPub Assistant Illustration" style="height: 250px; margin: 0.5rem 0.5rem 1rem 0.5rem; background: transparent;" class="demo-logo">
+										</center>
+									</li>
+									<li>Created to facilitate:
+										<ul>
+											<li>sibling configuration,</li>
+										    <li>creation of the JSON sibling configuration files,</li>
+										    <li>execution of NeuroDataPub</li>
+										</ul>
+									</li>
+								</ul>
+								
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>Reduce the risk of errors</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>Execution of NeuroDataPub in 3 modes:
+										<ul>
+								    		<li>creation and publication of a datalad dataset,</li>
+								    		<li>creation of a datalad dataset only,</li>
+								    		<li>publication of an existing datalad dataset only.</li>
+								    	</ul>
+								    </li><br>
+								    <li>Control the configurations before enabling execution.</li>
+								    <li>Use <a href="https://json-schema.org/">JSON schema</a> to validate the JSON sibling configuration files.</li>
+								</ul>
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>How to get started</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>Instructions for installation and usage available on ReadTheDocs
+										<center>
+											<img data-src="images/neurodatapub_rtd.png" alt="NeuroDataPub RTD Documentation" style="width: 600px; margin: 2rem 0.5rem 2rem 0.5rem; background: transparent;" class="demo-logo"><br>
+											<a href="https://neurodatapub.readthedocs.io">https://neurodatapub.readthedocs.io</a> 
+										</center>
+									</li>
+								</ul>
+
+								
+							</p>
+						</small>
+					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Section title slide</h2>
+						<h2>How to interact with a dataset published by NeuroDataPub</h2>
 					</section>
 
 					<section>
-						<h3>Slide with centered image</h3>
-
-						<center>
-							<img data-src="images/synapsy_logo.png" alt="A centered image" style="height: 480px; margin: 0.5rem 0.5rem 0.5rem a0.5rem; background: transparent;" class="demo-logo">
-						</center>
+						<h3>Install a local copy of the published dataset (no content)</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>Configure ssh by adding the following lines to the <a style="color:chocolate">~/.ssh/config</a> file:
+										<pre><code data-trim class="language-nestedtext" >
+Host stockage.server.ch
+	HostName stockage.server.ch
+	User user
+										</code></pre>
+										This will indicate automatically to ssh which user login to use to connect.
+									<li>Clone with Datalad the GitHub dataset repository:
+										<pre><code data-trim class="language-shell">
+(neurodatapub-env)$ datalad clone "git@github.com:NCCR-SYNAPSY/ds-NeuroDataPubTest13.git"
+										</code></pre>
+									</li><br>
+									<li><b>Note:</b> <a style="color:chocolate">At this stage, the dataset does not contain any annexed files.</a> The ssh information will be used when establishing the ssh connection to download the actual annexed content from the data storage server.</li>
+								</ul>
+							</p>
+						</small>
 					</section>
 
-					<section data-background-iframe="https://nccr-synapsy.ch/" data-background-interactive>
-						<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 30px; text-align: left;">
-							<h2>Slide with embedded HTML page</h2>
-							<small><a href="https://nccr-synapsy.ch/">https://nccr-synapsy.ch/</a></small>
-						</div>
-					</section>	
+					<section>
+						<h3>Download the annexed file content on demand</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>For instance, one can download the annexed T1w image from the SSH data storage server with <b>datalad get</b> command the GitHub dataset repository:
+										<pre><code data-trim class="language-shell">
+(neurodatapub-env)$ datalad get -d "ds-NeuroDataPubTest13" "sub-01/ses-01/anat/*T1w.nii.gz"
+										</code></pre>
+									</li><br>
+									<li><b>Note:</b> If annexed files are published on a SSH data storage server, one might have an account to access it and be able to download the image.</li>
+								</ul>
+							</p>
+						</small>
+					</section>
+
+					<section>
+						<h3>How to update the publish a new version of the dataset</h3>
+						<small>
+							<p align="left">
+								<ul>
+									<li>Update the CHANGES of the BIDS dataset where you will refer to the new dataset version, for instance:
+										<pre><code data-trim>
+1.0.2 2021-08-27
+	- Fix participants.tsv
+										</code></pre>
+										
+									<li>Save the state of the dataset with <b>datalad save</b> with the <b>-t</b> tag which specifies the new version and push the changes to GitHub sibling with <b>datalad push</b>:
+										<pre><code data-trim>
+(neurodatapub-env)$ datalad save -d "ds-NeuroDataPubTest13" -m 'Brief change description' -t 1.0.2 
+(neurodatapub-env)$ datalad push -d "ds-NeuroDataPubTest13" --to github
+										</code></pre>
+									</li>
+								</ul>
+							</p>
+						</small>
+					</section>
 
 				</section>
 
