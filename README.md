@@ -1,5 +1,11 @@
-Template for RevealJS-based presentations for NCCR Synapsy project (https://nccr-synapsy.ch).
 
+Presentation about "Adopting Datalad for Sharing Neuroimaging Data: Introduction to NeuroDataPub".
+
+Interactive slides can be viewed at https://NCCR-SYNAPSY.github.io/introduction-to-neurodatapub/.
+
+Generated PDF can be downloaded at https://github.com/NCCR-SYNAPSY/introduction-to-neurodatapub/raw/main/introduction-to-neurodatapub.pdf.
+
+Presented in the context of a followup Data Management Plan meeting of the NCCR-Synapsy project (https://nccr-synapsy.ch).
 
 ## License
 
